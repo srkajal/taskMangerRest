@@ -20,9 +20,7 @@ class ErrorResponse {
     }
 
     public ErrorResponse(HttpStatus status, String message, String error) {
-        this.status = status;
-        this.message = message;
-        this.errors = Collections.singletonList(error);
+        this(status, message, Collections.singletonList(error));
     }
 
     public HttpStatus getStatus() {
